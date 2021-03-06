@@ -98,11 +98,17 @@ button[disabled] {
 }
 
 #password {
+  width: 100%;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   border: none;
   display: block;
+  resize: none;
+  text-align: center;
+  overflow: hidden;
+}
+.card-body{
   width: 100%;
   padding-top: 15px;
   padding-left: 15px;
@@ -114,8 +120,6 @@ button[disabled] {
   margin-bottom: 10px;
   border: 2px dashed #c0c7cf;
   border-radius: 6px;
-  resize: none;
-  overflow: hidden;
 }
 
 @media (max-width: 690px) {

@@ -15,18 +15,46 @@
       <div class="card">
         <div class="card-header">
           <h2>Generate a Password</h2>
+          <span id="validation_errors"></span>
         </div>
+      <article id="pass_types" class="steps">
         <div class="card-body">
-          <textarea
+         <h3>Select Types of Characters to be used in your password</h3>
+          <label for="lowercase">LowerCase</label><input id="lowercase" type="checkbox" class="char_types" name="char_types" value="lowercase">
+          <br><label for="uppercase">UpperCase</label><input id="uppercase" type="checkbox" class="char_types" name="char_types" value="uppercase">
+          <br><label for="numeric">Numeric</label><input id="numeric" type="checkbox" class="char_types" name="char_types" value="numeric">
+          <br><label for="special">Special Characters</label><input id="special" type="checkbox" class="char_types" name="char_types" value="special">
+        </div>
+          <div class="card-footer">
+            <button data-step="1" class="btn next_step">Change Length</button>
+            <button id="generate" data-step="3" class="btn">Generate Password</button>
+        </div>
+      </article>  
+
+      <article id="length-cont" class="steps">
+        <div class="card-body">
+        <h3>Select Desired Password Length</h3>
+          Current Lenght:<strong id="selected_value"></strong><br>
+          Change Lenght Using This Slidebar: <input type="range" min="6" max="128" value="8" class="slider" id="p_length">
+        </div>
+        <div class="card-footer">
+          <button data-step="2" class="btn next_step">Next Step</button>
+        </div>
+      </article>
+      
+      <article id="start" class="password_result">
+        <div class="card-body">
+        <textarea
             readonly
             id="password"
-            placeholder="Your Secure Password"
+            placeholder="To Generate New Password Click Start"
             aria-label="Generated Password"
           ></textarea>
         </div>
         <div class="card-footer">
-          <button id="generate" class="btn">Generate Password</button>
+          <button data-step="1" class="btn next_step">Start</button>
         </div>
+        </article>
       </div>
     </div>
     <script src="./Develop/script.js"></script>
