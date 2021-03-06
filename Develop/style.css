@@ -29,7 +29,11 @@ header {
   padding-top: 0px;
   color: hsl(206, 17%, 28%);
 }
-
+#validation_errors{
+  display: block;
+  font-weight: bold;
+  color: red;
+}
 .card {
   background-color: hsl(0, 0%, 100%);
   border-radius: 5px;
@@ -86,8 +90,12 @@ header {
   padding: 14px 34px;
   text-align: center;
   cursor: pointer;
+  text-decoration: none;
 }
-
+/* change the color of the restart button */
+.restart-btn{
+  background-color: rgb(6, 111, 182);
+}
 button[disabled] {
   cursor: default;
   background: #c0c7cf;
@@ -97,7 +105,7 @@ button[disabled] {
   float: right;
 }
 
-#password {
+.password {
   width: 100%;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -107,6 +115,19 @@ button[disabled] {
   resize: none;
   text-align: center;
   overflow: hidden;
+}
+.result-body{
+  width: 100%;
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 15px;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 2px dashed #c0c7cf;
+  border-radius: 6px;
 }
 .card-body{
   width: 100%;

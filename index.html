@@ -14,10 +14,10 @@
       </header>
       <div class="card">
         <div class="card-header">
-          <h2>Generate a Password</h2>
+          <h2>Generate a Random Password</h2>
           <span id="validation_errors"></span>
-        </div>
-      <article id="pass_types" class="steps">
+        </div>       
+        <article id="pass_types" class="steps">
         <div class="card-body">
          <h3>Select Types of Characters to be used in your password</h3>
           <label for="lowercase">LowerCase</label><input id="lowercase" type="checkbox" class="char_types" name="char_types" value="lowercase">
@@ -27,13 +27,13 @@
         </div>
           <div class="card-footer">
             <button data-step="1" class="btn next_step">Change Length</button>
-            <button id="generate" data-step="3" class="btn">Generate Password</button>
+            <button id="generate" class="btn">Generate Password</button>
         </div>
       </article>  
 
       <article id="length-cont" class="steps">
         <div class="card-body">
-        <h3>Select Desired Password Length</h3>
+        <h3>Select Password Length</h3>
           Current Lenght:<strong id="selected_value"></strong><br>
           Change Lenght Using This Slidebar: <input type="range" min="6" max="128" value="8" class="slider" id="p_length">
         </div>
@@ -42,17 +42,22 @@
         </div>
       </article>
       
-      <article id="start" class="password_result">
+      <article id="start">
         <div class="card-body">
-        <textarea
+         
+          <div id="result" class="steps">
+           <h3>This is your generated password. <br>Thank you for using this service</h3>
+          <textarea
             readonly
             id="password"
-            placeholder="To Generate New Password Click Start"
-            aria-label="Generated Password"
+            class="password"
+            aria-label="How to Info Section"
           ></textarea>
+          </div>
         </div>
         <div class="card-footer">
-          <button data-step="1" class="btn next_step">Start</button>
+          <button id="statusMessage" data-step="1" class="btn next_step">Start</button>
+          <a id="restart" href="index.html" class="btn restart-btn">Reset</a>
         </div>
         </article>
       </div>
