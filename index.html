@@ -7,61 +7,60 @@
     <title>Password Generator</title>
     <link rel="stylesheet" href="./Develop/style.css" />
   </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Password Generator</h1>
-      </header>
-      <div class="card">
-        <div class="card-header">
-          <h2>Generate a Random Password</h2>
-          <span id="validation_errors"></span>
-        </div>       
-        <article id="pass_types" class="steps">
-        <div class="card-body">
-         <h3>Select Types of Characters to be used in your password</h3>
-          <label for="lowercase">LowerCase</label><input id="lowercase" type="checkbox" class="char_types" name="char_types" value="lowercase">
-          <br><label for="uppercase">UpperCase</label><input id="uppercase" type="checkbox" class="char_types" name="char_types" value="uppercase">
-          <br><label for="numeric">Numeric</label><input id="numeric" type="checkbox" class="char_types" name="char_types" value="numeric">
-          <br><label for="special">Special Characters</label><input id="special" type="checkbox" class="char_types" name="char_types" value="special">
-        </div>
-          <div class="card-footer">
-            <button data-step="1" class="btn next_step">Change Length</button>
-            <button id="generate" class="btn">Generate Password</button>
-        </div>
-      </article>  
-
-      <article id="length-cont" class="steps">
-        <div class="card-body">
-        <h3>Select Password Length</h3>
-          Current Lenght:<strong id="selected_value"></strong><br>
-          Change Lenght Using This Slidebar: <input type="range" min="6" max="128" value="8" class="slider" id="p_length">
-        </div>
-        <div class="card-footer">
-          <button data-step="2" class="btn next_step">Next Step</button>
-        </div>
-      </article>
-      
-      <article id="start">
-        <div class="card-body">
-         
-          <div id="result" class="steps">
-           <h3>This is your generated password. <br>Thank you for using this service</h3>
-          <textarea
-            readonly
-            id="password"
-            class="password"
-            aria-label="How to Info Section"
-          ></textarea>
-          </div>
-        </div>
-        <div class="card-footer">
-          <button id="statusMessage" data-step="1" class="btn next_step">Start</button>
-          <a id="restart" href="index.html" class="btn restart-btn">Reset</a>
-        </div>
-        </article>
+<body>
+<div class="wrapper">
+  <header>
+    <h1>Password Generator</h1>
+  </header>
+  <div class="card">
+    <div class="card-header">
+      <h2>Generate a Random Password</h2>
+      <span id="validation_errors"></span>
+    </div>       
+    <article id="pass_types" class="steps">
+      <div class="card-body">
+        <h3>Select Types of Characters to be used in your password</h3>
+        <label for="lowercase">LowerCase</label><input id="lowercase" type="checkbox" class="char_types" name="char_types" value="lowercase">
+        <br><label for="uppercase">UpperCase</label><input id="uppercase" type="checkbox" class="char_types" name="char_types" value="uppercase">
+        <br><label for="numeric">Numeric</label><input id="numeric" type="checkbox" class="char_types" name="char_types" value="numeric">
+        <br><label for="special">Special Characters</label><input id="special" type="checkbox" class="char_types" name="char_types" value="special">
       </div>
-    </div>
-    <script src="./Develop/script.js"></script>
-  </body>
+      <div class="card-footer">
+        <button data-step="1" class="btn next_step">Change Length</button>
+        <button id="generate" class="btn">Generate Password</button>
+      </div>
+    </article>  
+
+    <article id="length-cont" class="steps">
+      <div class="card-body">
+        <h3>Select Password Length</h3>
+        Current Lenght:<strong id="selected_value"></strong><br>
+        Change Lenght Using This Slidebar: <input type="range" min="8" max="128" value="8" class="slider" id="p_length">
+      </div>
+      <div class="card-footer">
+        <button data-step="2" class="btn next_step">Next Step</button>
+      </div>
+    </article>
+
+    <article id="start">
+      <div class="card-body">
+        <div id="result" class="steps">
+          <h3>This is your generated password. <br>Thank you for using this service</h3>
+          <textarea
+          readonly
+          id="password"
+          class="password"
+          aria-label="How to Info Section"
+          ></textarea>
+        </div>
+      </div>
+      <div class="card-footer">
+        <button id="statusMessage" data-step="1" class="btn next_step">Start</button>
+        <a id="restart" href="index.html" class="btn restart-btn">Reset</a>
+      </div>
+    </article>
+  </div>
+</div>
+<script src="./Develop/script.js"></script>
+</body>
 </html>
