@@ -1,12 +1,13 @@
 // Assignment Code
-
+//generate password button object to use for click event listening
 var generateBtn = document.querySelector("#generate");
+//next buttons 
 var nextBtns = document.querySelectorAll(".next_step");
 var charTypes = document.querySelectorAll(".char_types");
 
-//Set
-var lowercase = "abcdefghijklmnopqrstuvwxyz";
-var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+//Set sotarge variables
+var lowercase = "abcdefghijklmnopqrstuvwxyz";//lowercasecharset
+var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";//uppercasecharset
 var numeric = "0123456789"
 var special="!#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
 var selected_length = 0
@@ -57,7 +58,7 @@ function collect_password_criteria(step){
   if (step==1){
     document.getElementById("length-cont").style.display="block";
   }else if(step==2){
-    if (selected_length<=8 || selected_length>=128){
+    if (selected_length<=8 || selected_length > 128){
       document.getElementById("length-cont").style.display="block"
       document.getElementById("validation_errors").innerText="Password Length must be between 8 and 128!"
       return;
