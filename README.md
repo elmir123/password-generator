@@ -26,7 +26,7 @@ Steps:
 
 The following image demonstrates the web application's appearance:
 
-![Password Generater Step Form.](./assets/images/password-generation-app.png)
+![Password Generater Step Form.](./Assets/images/password-generation-app.png)
 
 To view the working app use the link below:
 
