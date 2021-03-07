@@ -1,9 +1,11 @@
+/* seting border-box on all elements */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
+/* Setting main section css values */
 html,
 body,
 .wrapper {
@@ -11,29 +13,31 @@ body,
   margin: 0;
   padding: 0;
 }
-
+/* setting body color to white and sans-serif as family font */
 body {
   font-family: sans-serif;
   background-color: #f9fbfd;
 }
-
+/* wrapper specific padding */
 .wrapper {
   padding-top: 30px;
   padding-left: 20px;
   padding-right: 20px;
 }
-
+/* header tag text aligment, text color and padding,  */
 header {
   text-align: center;
   padding: 20px;
   padding-top: 0px;
   color: hsl(206, 17%, 28%);
 }
+/* user seection validation error formating  */
 #validation_errors{
   display: block;
   font-weight: bold;
   color: red;
 }
+/* setting the car layout, font size, background color margin and max-width */
 .card {
   background-color: hsl(0, 0%, 100%);
   border-radius: 5px;
@@ -46,6 +50,7 @@ header {
   padding: 30px 40px;
 }
 
+/* card header :after sudo formatin width background hight */
 .card-header::after {
   content: " ";
   display: block;
@@ -54,14 +59,27 @@ header {
   height: 2px;
 }
 
+/* making the card body display at min-hight of 100px */
 .card-body {
-  min-height: 100px;
+  width: 100%;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 85px;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 2px dashed #c0c7cf;
+  border-radius: 6px;
 }
 
+/* align the card footer text */
 .card-footer {
   text-align: center;
 }
 
+/* card footer sudo before formating */
 .card-footer::before {
   content: " ";
   display: block;
@@ -70,12 +88,14 @@ header {
   height: 2px;
 }
 
+/* card footer sudo :after formating setting it to block and clearing both for floating objects  */
 .card-footer::after {
   content: " ";
   display: block;
   clear: both;
 }
 
+/* button formating  */
 .btn {
   border: none;
   background-color: hsl(360, 91%, 36%);
@@ -92,19 +112,13 @@ header {
   cursor: pointer;
   text-decoration: none;
 }
+
 /* change the color of the restart button */
 .restart-btn{
   background-color: rgb(6, 111, 182);
 }
-button[disabled] {
-  cursor: default;
-  background: #c0c7cf;
-}
 
-.float-right {
-  float: right;
-}
-
+/* formating the password text area */
 .password {
   width: 100%;
   -webkit-appearance: none;
@@ -116,33 +130,8 @@ button[disabled] {
   text-align: center;
   overflow: hidden;
 }
-.result-body{
-  width: 100%;
-  padding-top: 5px;
-  padding-left: 5px;
-  padding-right: 5px;
-  padding-bottom: 15px;
-  font-size: 1.2rem;
-  text-align: center;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border: 2px dashed #c0c7cf;
-  border-radius: 6px;
-}
-.card-body{
-  width: 100%;
-  padding-top: 15px;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-bottom: 85px;
-  font-size: 1.2rem;
-  text-align: center;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border: 2px dashed #c0c7cf;
-  border-radius: 6px;
-}
 
+/* media specific formating  */
 @media (max-width: 690px) {
   .btn {
     font-size: 1rem;
@@ -154,9 +143,11 @@ button[disabled] {
     font-size: 1rem;
   }
 }
-
+/* changing the button text and size on small screens */
 @media (max-width: 500px) {
   .btn {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 }
+
+

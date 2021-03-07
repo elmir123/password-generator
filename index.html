@@ -8,16 +8,23 @@
     <link rel="stylesheet" href="./Develop/style.css" />
   </head>
 <body>
-<div class="wrapper">
+<!-- main section of the website -->
+<main class="wrapper">
+  <!-- website header -->
   <header>
     <h1>Password Generator</h1>
   </header>
-  <div class="card">
+  <!-- card section -->
+  <section class="card"> 
+    <!-- card header -->
     <div class="card-header">
       <h2>Generate a Random Password</h2>
+      <!-- user selection validation -->
       <span id="validation_errors"></span>
-    </div>       
+    </div>     
+    <!-- application steps are respresented with article tag   -->
     <article id="pass_types" class="steps">
+      <!-- card body -->
       <div class="card-body">
         <h3>Select Types of Characters to be used in your password</h3>
         <label for="lowercase">LowerCase</label><input id="lowercase" type="checkbox" class="char_types" name="char_types" value="lowercase">
@@ -59,8 +66,8 @@
         <a id="restart" href="index.html" class="btn restart-btn">Reset</a>
       </div>
     </article>
-  </div>
-</div>
+  </section>
+</main>
 <script src="./Develop/script.js"></script>
 </body>
 </html>
