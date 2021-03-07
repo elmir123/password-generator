@@ -146,12 +146,16 @@ function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
-  // alert the password
+  // hide the character type selection
   document.getElementById("pass_types").style.display="none";
+  // display the start card body
   document.getElementById("start").style.display = "block";
+  // display the result section
   document.getElementById("result").style.display = "block";
+  // change the result sections button text to let user change the selection
   document.getElementById("statusMessage").innerText=
   "Change Generated Password"
+  //unhide the reset button to allow the user to start over
   document.getElementById("restart").style.display = "inline-block";
 
 }
